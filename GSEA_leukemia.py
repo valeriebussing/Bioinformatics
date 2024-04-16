@@ -60,7 +60,7 @@ except ImportError:
 "Loading the downloaded files and performing GSEA." 
 import gseapy as gp
 
-# Run the cell below in Linux console or Colab (see README for instructions on running GSEA in Colab)
+# Run the cell below in BASH (see README for instructions)
 path_to_files = "/content/"
 permutation_number = 100 # reduce number to speed up test
 core_count = cpu_count() - 2
