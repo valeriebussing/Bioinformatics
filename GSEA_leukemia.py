@@ -60,8 +60,7 @@ except ImportError:
 "Loading the downloaded files and performing GSEA." 
 import gseapy as gp
 
-"""> **Important:** Only change the values at: `# CHANGE THIS #` (if needed) and change `# X #` in line 10 and 11 to the name of your dataset."""
-
+# Run the cell below in Linux console or Colab (see README for instructions on running GSEA in Colab)
 path_to_files = "/content/"
 permutation_number = 100 # reduce number to speed up test
 core_count = cpu_count() - 2
@@ -100,16 +99,13 @@ gs_res = gp.gsea(
 
 finished(c2_symbols)
 
-"""> **Note:** If you would like to understand what the 12 different *parameters* of the gsea *function* mean: type `help(gp.gsea)` in a new code cell."""
-
 from google.colab import drive
 drive.mount('/content/drive')
 
 """
 ---
 
-**DIY:** Here you need to code a print statement that shows the labels of the phenotype of the **X**.cls.txt file. <br>
-You need to change **X** to your file name
+*Print statement showing Leukemia phenotybe labels in the Leukemia.cls.txt file. <br>
 """
 
 labelsFile = pd.read_csv("Leukemia.cls.txt", sep="\t")
@@ -127,7 +123,6 @@ We can plot different gene sets by changing the number between brackets (`e.g. [
 
 terms = gs_res.res2d.Term.values
 
-# CHANGE THIS #
 first_plot = terms[0]
 second_plot = terms[-1]
 # =========== #
