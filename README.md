@@ -10,3 +10,6 @@ Download the files below:
 * *c2.all.v7.4.symbols.gmt*, gene set file
 
 If you are working in Google Colab, make sure you have uploaded the files to the files tab. If you are working locally, you can run line 65 if the files are located within the same folder as this notebook. Otherwise, add the path that leads to the folder in which you have stored the files (e.g. "C:/Downloads/") in `path_to_files = "C:/Downloads/"`.
+
+**Note:** If you would like to understand what the 12 different *parameters* of the gsea *function* mean: type `help(gp.gsea)` in a new code cell.
+
