@@ -41,14 +41,7 @@
 # from sys import path as link
 # link.append('/usr/local/lib/python3.8/site-packages/')
 
-"""**Now download the files below:** <br>
-* *Leukemia_collapsed_symbols.gct.txt*, file containing the genes
-* *Leukemia.cls.txt*, file containing the phenotypes  
-* *c2.all.v7.4.symbols.gmt*, gene set file
-
 ---
-
-"""
 
 # Check the amount of cores we can use
 from os import cpu_count
@@ -64,10 +57,7 @@ try:
 except ImportError:
   from gseapy.plot import gsea_plot as gseaplot
 
-
-
-"""Loading the downloaded files and performing GSEA. If you are working in Google Colab, make sure you have uploaded the files to the files tab. If you are working locally, you can run the following cell if the files are located within the same folder as this notebook. Otherwise, add the path that leads to the folder in which you have stored the files (e.g. "C:/Downloads/") in `path_to_files = "C:/Downloads/"`."""
-
+"Loading the downloaded files and performing GSEA." 
 import gseapy as gp
 
 """> **Important:** Only change the values at: `# CHANGE THIS #` (if needed) and change `# X #` in line 10 and 11 to the name of your dataset."""
