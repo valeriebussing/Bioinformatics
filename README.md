@@ -9,7 +9,7 @@ Download the files below:
 * *Leukemia.cls.txt*, file containing the phenotypes  
 * *c2.all.v7.4.symbols.gmt*, gene set file
 
-When working in Jupyter, you can run line 64-66 if the files are located within the same folder as this notebook. Otherwise, add the path that leads to the folder in which you have stored the files (e.g. "C:/Downloads/") in `path_to_files = "C:/Downloads/"`.
 
-**Note:** If you would like to understand what the 12 different *parameters* of the gsea *function* mean: type `help(gp.gsea)` in a new code cell.
+
+
 
