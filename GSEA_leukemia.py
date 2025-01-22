@@ -1,14 +1,7 @@
 # -*- coding: utf-8 -*-
-"""Original file is located at
-    https://colab.research.google.com/drive/1YK4PMxSgeZXCs4fbeRiP5BNAJohwyFhE
-
-# This is a Gene Set Enrichment Analysis on a **Leukemia** dataset
-
-**Paper** : https://doi.org/10.1073/pnas.0506580102 <br>
+""" Paper : https://doi.org/10.1073/pnas.0506580102 <br>
 
 ---
-
-## Setup
 
 > Installing required packages:
 """
