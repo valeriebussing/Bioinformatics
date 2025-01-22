@@ -53,7 +53,7 @@ except ImportError:
 "Loading the downloaded files and performing GSEA." 
 import gseapy as gp
 
-# Run the cell below in BASH (see README for instructions)
+# Run the cell below in BASH 
 path_to_files = "/content/"
 permutation_number = 100 # reduce number to speed up test
 core_count = cpu_count() - 2
@@ -107,11 +107,9 @@ print(labelsFile)
 """
 ---
 
-GSEA results: store Gene Names inside of the *variable* `terms` and *index* the items in this variable: <br>
-* `terms[0]` gives us the first (highest ranked) gene set. <br>
-* `terms[-1]` gives us the last (lowest ranked) gene set. <br>
-
-We can plot different gene sets by changing the number between brackets (`e.g. [0] to [1]`):
+GSEA results: store Gene Names inside of `terms` and index the items: <br>
+* `terms[0]` gives us the first (highest ranked) gene set <br>
+* `terms[-1]` is the lowest ranked gene set <br>
 """
 
 terms = gs_res.res2d.Term.values
@@ -127,7 +125,7 @@ gseaplot(gs_res.ranking, term = second_plot, **gs_res.results[second_plot])
 
 """> **Note:** Want to save the plot? Add `, ofname='your_file_name.pdf'` to the end of `gseaplot()`.
 
-**Choose a gene set from the `terms_list` below. You can find these names in the [GSEA Database](https://www.gsea-msigdb.org/gsea/msigdb/genesets.jsp?collection=C2) (bottom of the page, referred to as 'Standard name' when you click on the gene). Download the *gmt* format of this geneset. Replace the $\ldots$ *inside* the apostrophes with the name you selected.<br>
+**Choosing gene set from the `terms_list` below. These names are in the [GSEA Database](https://www.gsea-msigdb.org/gsea/msigdb/genesets.jsp?collection=C2) <br>
 """
 
 terms_list = terms.tolist()
@@ -148,8 +146,8 @@ gseaplot(gs_res.ranking, term = terms[4], **gs_res.results[terms[4]])
 gseaplot(gs_res.ranking, term = terms[20], **gs_res.results[terms[20]])
 
 """ <br>
-
-Previously, we ran the `gsea()` function 'as-is'. Let's see what happens when we change the parameter `permutation_type` to 'phenotype' instead of 'geneset'. Replace the dots with the name of the geneset you downloaded from the website, to only run GSEA with this one gene set. First run the code with `permutation_type= 'gene_set'`. Then change this parameter to 'phenotype'.
+Replacing the dots with the name of the geneset you downloaded from the website, to only run GSEA with this one gene set. 
+First run the code with `permutation_type= 'gene_set'`. Then change this parameter to 'phenotype'.
 """
 
 new_gene_set = path_to_files + "... .gmt"   # Fill in the name of the downloaded file on the dots.
@@ -160,7 +158,7 @@ gs_res_new1 = gp.gsea(
 
     min_size =15,
 
-    permutation_type = 'gene_set',
+    permutation_type = 'phenotype',
     permutation_num = permutation_number,
     outdir = None,                          # do not write output to disk
     no_plot = True,                         # Skip plotting
